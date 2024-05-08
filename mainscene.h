@@ -5,6 +5,9 @@
 #include<QTimer>
 #include "map.h"
 #include"heroplane.h"
+#include "bullet.h"
+#include "enemyplane.h"
+#include"bomb.h"
 
 class MainScene : public QWidget
 {
@@ -27,6 +30,15 @@ public:
 
     //重写鼠标移动事件
     void mouseMoveEvent(QMouseEvent *event);
+    //敌机出场
+    void enemyToScene();
+    //碰撞检测
+    void collisionDetection();
+    //敌机数组
+    EnemyPlane m_enemys[ENEMY_NUM];
+
+    //敌机出场间隔记录
+    int m_recorder;
 
     //地图对象
     Map m_map;
@@ -34,5 +46,10 @@ public:
     HeroPlane m_hero;
     //定时器
     QTimer m_Timer;
+
+    //爆炸数组
+    Bomb m_bombs[BOMB_NUM];
+    //测试子弹对象
+//    Bullet temp_Bullet;
 };
 #endif // MAINSCENE_H

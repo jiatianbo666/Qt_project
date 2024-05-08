@@ -15,7 +15,27 @@ HeroPlane::HeroPlane()
 
 void HeroPlane::shoot()
 {
+    //累加事件间隔记录的变量
+    m_recorder++;
+    //如果记录数字 未达到发射间隔，直接return
+    if(m_recorder < BULLET_INTERVAL)
+    {
+        return;
+    }
+    m_recorder = 0;
+    //发射子弹
+    for(int i = 0 ; i < BULLET_NUM;i++)
+    {
+        //如果是空闲状态的子弹，发射子弹
+        if(m_bullets[i].m_Free)
+        {
+            m_bullets[i].m_Free = false;
+            m_bullets[i].m_X = m_X+m_Rect.width()*0.5 - 10;
+            m_bullets[i].m_Y = m_Y - 25 ;
+            break;
+        }
 
+    }
 }
 
 void HeroPlane::setPosition(int x, int y)

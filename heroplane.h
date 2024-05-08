@@ -2,7 +2,7 @@
 #define HEROPLANE_H
 #include<QRect>
 #include<QPixmap>
-
+#include"bullet.h"
 class HeroPlane
 {
 public:
@@ -19,6 +19,11 @@ public:
     int m_Y;
     //飞机矩形边框
     QRect m_Rect;
+    //弹匣
+    Bullet m_bullets[BULLET_NUM];
+
+    //发射间隔记录
+    int m_recorder;
 };
 
 #endif // HEROPLANE_H
