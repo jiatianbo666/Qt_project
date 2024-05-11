@@ -8,7 +8,7 @@
 #include "bullet.h"
 #include "enemyplane.h"
 #include"bomb.h"
-
+#include"score.h"
 class MainScene : public QWidget
 {
      Q_OBJECT
@@ -49,6 +49,8 @@ public:
 
     //爆炸数组
     Bomb m_bombs[BOMB_NUM];
+private slots:
+    void recivelogin();
     //测试子弹对象
 //    Bullet temp_Bullet;
 };

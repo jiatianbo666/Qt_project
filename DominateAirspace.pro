@@ -22,7 +22,9 @@ SOURCES += \
     heroplane.cpp \
     main.cpp \
     mainscene.cpp \
-    map.cpp
+    map.cpp \
+    score.cpp \
+    start.cpp
 
 HEADERS += \
     bomb.h \
@@ -31,10 +33,15 @@ HEADERS += \
     enemyplane.h \
     heroplane.h \
     mainscene.h \
-    map.h
+    map.h \
+    score.h \
+    start.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+FORMS += \
+    start.ui
 

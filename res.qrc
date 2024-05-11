@@ -1,19 +1,23 @@
 <RCC>
     <qresource prefix="/">
         <file>素材/app.ico</file>
+        <file>素材/app1.ico</file>
         <file>素材/bg.wav</file>
         <file>素材/bomb.wav</file>
         <file>素材/bomb-1.png</file>
         <file>素材/bomb-2.png</file>
         <file>素材/bomb-3.png</file>
+        <file>素材/bomb-4.png</file>
         <file>素材/bomb-5.png</file>
         <file>素材/bomb-6.png</file>
+        <file>素材/bomb-7.png</file>
         <file>素材/bullet_1.png</file>
         <file>素材/bullet_2.png</file>
         <file>素材/bullet_3.png</file>
         <file>素材/bullet_4.png</file>
         <file>素材/bullet_5.png</file>
         <file>素材/bullet_6.png</file>
+        <file>素材/bullet_7.png</file>
         <file>素材/bullet_8.png</file>
         <file>素材/bullet_9.png</file>
         <file>素材/bullet_10.png</file>
@@ -36,5 +40,8 @@
         <file>素材/img-plane_4.png</file>
         <file>素材/img-plane_5.png</file>
         <file>素材/img-plane_6.png</file>
+        <file>素材/img-plane_7.png</file>
+        <file>素材/开始.png</file>
+        <file>素材/梦回还.wav</file>
     </qresource>
 </RCC>

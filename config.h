@@ -6,7 +6,7 @@
 #define GAME_HEIGHT 768
 #define GAME_TITLE "制霸领空"
 #define GAME_RES_PATH "./plane.rcc"//rcc文件路径
-#define GAME_ICON ":/素材/app.ico"//图标资源加载路径
+#define GAME_ICON ":/素材/app1.ico"//图标资源加载路径
 #define GAME_RATE 10//定时器刷新时间间隔 单位ms
 //地图数据
 #define MAP_PATH ":/素材/img_bg_level_2.jpg"//地图路径
@@ -29,6 +29,8 @@
 #define BOMB_MAX  7      //爆炸图片最大索引
 #define BOMB_INTERVAL 15  //爆炸切图时间间隔
 //音乐效果
-#define SOUND_BACKGROUND ":/素材/bg.wav"
+#define SOUND_BACKGROUND ":/素材/梦回还.wav"
 #define SOUND_BOMB ":/素材/bomb.wav"
+//背景
+#define BACKGROUND ":/素材/开始.png"
 #endif // CONFIG_H

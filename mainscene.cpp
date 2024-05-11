@@ -5,12 +5,13 @@
 #include<QMoveEvent>
 #include<ctime>
 #include<QSound>
-
+#include<QGraphicsScene>
 MainScene::MainScene(QWidget *parent)
     : QWidget(parent)
 {
     //调用初始化场景
     initScene();
+
     //启动游戏
     playGame();
 }
@@ -34,6 +35,7 @@ void MainScene::initScene()
     m_recorder=0;
     //随机数种子
     srand((unsigned int)time(NULL));
+
 
 }
 
@@ -106,6 +108,13 @@ void MainScene::paintEvent(QPaintEvent *)
     painter.drawPixmap(0,m_map.m_map2_posY,m_map.m_map2);
     //绘制英雄飞机
     painter.drawPixmap(m_hero.m_X,m_hero.m_Y,m_hero.m_Plane);
+
+//    void MainScene::emergeword(QGraphicsScene *)
+//    {
+//            score=new Score();
+//        this->addItem(score);
+//    }
+
     //绘制子弹
     for(int i = 0 ;i < BULLET_NUM;i++)
     {
@@ -215,7 +224,6 @@ void MainScene::collisionDetection()
                 m_enemys[i].m_Free = true;
                 m_hero.m_bullets[j].m_Free = true;
 
-                //调用爆炸特效
                 //播放爆炸效果
               for(int k = 0 ; k < BOMB_NUM;k++)
               {
@@ -234,3 +242,9 @@ void MainScene::collisionDetection()
         }
     }
 }
+
+void MainScene::recivelogin()
+{
+    this->show();
+}
+
