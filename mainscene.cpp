@@ -9,11 +9,11 @@
 MainScene::MainScene(QWidget *parent)
     : QWidget(parent)
 {
-    //调用初始化场景
-    initScene();
+//    //调用初始化场景
+//    initScene();
 
-    //启动游戏
-    playGame();
+//    //启动游戏
+//    playGame();
 }
 
 MainScene::~MainScene()
@@ -99,7 +99,8 @@ void MainScene::updatePosition()
 //   temp_Bullet.m_Free=false;
 //    temp_Bullet.updatePosition();
 }
-
+bool gameover=false;
+QString word;
 void MainScene::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
@@ -142,6 +143,20 @@ void MainScene::paintEvent(QPaintEvent *)
            painter.drawPixmap(m_bombs[i].m_X,m_bombs[i].m_Y,m_bombs[i].m_pixArr[m_bombs[i].m_index]);
         }
     }
+
+    //文字展示结束游戏
+    QFont font("Arial",50);
+    painter.setFont(font);
+    painter.setPen(Qt::blue);
+    painter.drawText(60,400,word);
+    if(gameover){
+        m_Timer.stop();
+    }
+    //文字展示分数
+//    QFont font1("Arial",20);
+//    painter.setFont(font1);
+//    painter.setPen(Qt::red);
+//    painter.drawText(20,40,QString("Score: ") + QString::number(score->m_score));
     //测试子弹
  //painter.drawPixmap(temp_Bullet.m_X,temp_Bullet.m_Y,temp_Bullet.m_Bullet);
 }
@@ -223,7 +238,8 @@ void MainScene::collisionDetection()
 
                 m_enemys[i].m_Free = true;
                 m_hero.m_bullets[j].m_Free = true;
-
+             //得分
+                score->increase();
                 //播放爆炸效果
               for(int k = 0 ; k < BOMB_NUM;k++)
               {
@@ -240,11 +256,21 @@ void MainScene::collisionDetection()
 
             }
         }
+        if(m_enemys[i].m_Rect.intersects(m_hero.m_Rect))
+        {
+            gameover=true;
+            word="游戏结束";
+        }
     }
 }
 
 void MainScene::recivelogin()
 {
     this->show();
+    //调用初始化场景
+    initScene();
+
+    //启动游戏
+    playGame();
 }
 
