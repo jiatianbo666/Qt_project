@@ -238,8 +238,6 @@ void MainScene::collisionDetection()
 
                 m_enemys[i].m_Free = true;
                 m_hero.m_bullets[j].m_Free = true;
-             //得分
-                score->increase();
                 //播放爆炸效果
               for(int k = 0 ; k < BOMB_NUM;k++)
               {

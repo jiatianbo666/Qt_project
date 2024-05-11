@@ -8,7 +8,6 @@
 #include "bullet.h"
 #include "enemyplane.h"
 #include"bomb.h"
-#include"score.h"
 class MainScene : public QWidget
 {
      Q_OBJECT
@@ -47,8 +46,6 @@ public:
     //定时器
     QTimer m_Timer;
 
-    //得分
-    Score *score;
     //爆炸数组
     Bomb m_bombs[BOMB_NUM];
 private slots:

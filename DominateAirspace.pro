@@ -23,7 +23,6 @@ SOURCES += \
     main.cpp \
     mainscene.cpp \
     map.cpp \
-    score.cpp \
     start.cpp
 
 HEADERS += \
@@ -34,7 +33,6 @@ HEADERS += \
     heroplane.h \
     mainscene.h \
     map.h \
-    score.h \
     start.h
 
 # Default rules for deployment.

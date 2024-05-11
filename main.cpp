@@ -2,7 +2,6 @@
 #include <QApplication>
 #include<QResource>
 #include"config.h"
-#include"score.h"
 #include"start.h"
 int main(int argc, char *argv[])
 {

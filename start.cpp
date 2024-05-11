@@ -20,7 +20,7 @@ start::~start()
     delete ui;
 }
 
-void start::paintEvent(QPaintEvent *Event)
+void start::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
     painter.drawPixmap(0,0,width(),height(),QPixmap(BACKGROUND));
